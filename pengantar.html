@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata Pengantar Ketua - PGRI Kabupaten Tebo</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pgriGreen: {
+                            dark: '#0e2316',
+                            base: '#173623',
+                            card: '#22412d',
+                            border: '#2e553c'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Ambient Animated Green Gradient Background */
+        body {
+            background: linear-gradient(135deg, #09170e 0%, #153320 40%, #112a1a 70%, #08140c 100%);
+            background-size: 300% 300%;
+            animation: gradientShift 14s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Ambient glowing background spots */
+        .glow-light-1 {
+            position: fixed;
+            top: 15%;
+            left: 5%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(34, 139, 34, 0.2) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1;
+            animation: floatGlow 8s ease-in-out infinite alternate;
+        }
+
+        .glow-light-2 {
+            position: fixed;
+            bottom: 10%;
+            right: 5%;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(234, 179, 8, 0.12) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1;
+            animation: floatGlow 10s ease-in-out infinite alternate-reverse;
+        }
+
+        @keyframes floatGlow {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(25px, -20px) scale(1.15); }
+        }
+
+        /* Frosted Glassmorphism Styling */
+        .glass-panel {
+            background: rgba(36, 68, 48, 0.55);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.4);
+        }
+
+        .glass-card {
+            background: rgba(28, 56, 38, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-4px);
+            background: rgba(38, 74, 50, 0.75);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 12px 25px -5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(34, 197, 94, 0.15);
+        }
+
+        /* Page Smooth Entrance Fade */
+        .animate-fade-in {
+            animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="text-white min-h-screen flex flex-col justify-between relative overflow-x-hidden antialiased font-sans">
+
+    <!-- Ambient Glow Effects -->
+    <div class="glow-light-1"></div>
+    <div class="glow-light-2"></div>
+
+    <!-- MAIN CONTAINER -->
+    <div class="w-full max-w-5xl mx-auto px-4 sm:px-6 pt-6 pb-16 relative z-10 flex flex-col items-center animate-fade-in">
+        
+        <!-- TOP NAVIGATION BAR -->
+        <header class="w-full flex items-center justify-between py-3 px-4 rounded-2xl glass-panel mb-8 border border-white/10">
+            <a href="index.html" class="inline-flex items-center gap-2 bg-emerald-600/30 hover:bg-emerald-600/50 border border-emerald-500/30 hover:border-emerald-400 text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl transition-all duration-300 group shadow-md">
+                <i class="fa-solid fa-arrow-left transition-transform group-hover:-translate-x-1"></i>
+                <span>Kembali ke Portal</span>
+            </a>
+            
+            <div class="flex items-center gap-2.5">
+                <img src="logopgri.png" 
+                     alt="Logo PGRI" 
+                     class="w-7 h-7 sm:w-8 sm:h-8 object-contain filter drop-shadow"
+                     onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/2/23/Logo_PGRI.png';">
+                <span class="hidden sm:inline-block text-xs font-bold tracking-wider text-emerald-200">PGRI TEBO</span>
+            </div>
+        </header>
+
+        <!-- PAGE HEADER / TITLE -->
+        <div class="text-center mb-8">
+            <div class="inline-block bg-emerald-500/10 border border-emerald-500/30 backdrop-blur-md px-4 py-1 rounded-full mb-3">
+                <span class="text-[11px] sm:text-xs font-semibold tracking-widest text-emerald-300 uppercase">
+                    KATA PENGANTAR KETUA PGRI
+                </span>
+            </div>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-wide text-center text-white drop-shadow-md">
+                PGRI KABUPATEN TEBO
+            </h1>
+            <p class="text-xs sm:text-sm text-gray-300 mt-2 max-w-xl mx-auto">
+                Transformasi Digital Menuju Organisasi Guru yang Modern, Akuntabel, dan Melayani
+            </p>
+        </div>
+
+        <!-- PROFILE & WELCOME CARD -->
+        <div class="w-full glass-panel rounded-3xl p-6 sm:p-8 md:p-10 mb-8 relative overflow-hidden">
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-8">
+                
+                <!-- PROFILE AVATAR / PHOTO FRAME -->
+                <div class="flex-shrink-0 flex flex-col items-center">
+                    <div class="relative group">
+                        <!-- Glowing Ring Around Photo -->
+                        <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-amber-400 rounded-full blur-md opacity-70 group-hover:opacity-100 transition duration-500"></div>
+                        
+                        <!-- Profile Image Container -->
+                        <div class="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-emerald-900/80 bg-gray-800 flex items-center justify-center shadow-2xl">
+                            <!-- SVG Avatar Placeholder -->
+                            <svg class="w-full h-full text-emerald-100 bg-emerald-950/80" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                            </svg>
+                        </div>
+
+                        <!-- Status Badge -->
+                        <div class="absolute bottom-1 right-1 bg-emerald-500 border-2 border-slate-900 rounded-full p-1.5 text-white text-xs shadow-lg" title="Ketua Terverifikasi">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 text-center">
+                        <h2 class="text-lg sm:text-xl font-bold text-white tracking-wide">Dr. Sindi, S.H., M.H.</h2>
+                        <span class="inline-block mt-1 text-xs font-medium text-emerald-400 bg-emerald-950/80 px-3 py-1 rounded-full border border-emerald-500/30">
+                            Ketua PGRI Kabupaten Tebo
+                        </span>
+                    </div>
+                </div>
+
+                <!-- SAMBUTAN TEXT -->
+                <div class="flex-1 text-gray-200 text-sm sm:text-base leading-relaxed space-y-4">
+                    <div class="border-l-4 border-emerald-400 pl-4 py-1 bg-emerald-950/30 rounded-r-xl">
+                        <p class="italic text-emerald-200 font-medium text-xs sm:text-sm">
+                            "Assalamu’alaikum Warahmatullahi Wabarakatuh, Salam Sejahtera untuk Kita Semua, Tabik Pun, Salam Edukasi!"
+                        </p>
+                    </div>
+
+                    <p>
+                        Puji dan syukur senantiasa kita panjatkan ke hadirat Allah SWT, Tuhan Yang Maha Esa, atas rahmat dan karunia-Nya sehingga **Portal Resmi PGRI Kabupaten Tebo** dapat hadir sebagai garda terdepan layanan digital bagi seluruh tenaga pendidik dan kependidikan di Kabupaten Tebo.
+                    </p>
+
+                    <p>
+                        Sebagai organisasi profesi, ketenagakerjaan, dan perjuangan, PGRI Kabupaten Tebo terus berkomitmen untuk beradaptasi dengan perkembangan teknologi informasi. Kehadiran portal ini bukan sekadar lambang modernisasi, melainkan sarana nyata dalam mempercepat pelayanan, memperluas jangkauan komunikasi, serta memperkokoh solidaritas sesama anggota.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- OPTIMALISASI PENGGUNAAN WEBSITE SECTION -->
+        <div class="w-full mb-8">
+            <div class="text-center mb-6">
+                <h3 class="text-xl sm:text-2xl font-bold text-white flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-rocket text-emerald-400"></i>
+                    <span>Optimalisasi Penggunaan Website Organisasi</span>
+                </h3>
+                <p class="text-xs sm:text-sm text-gray-300 mt-1">
+                    Empat Pilar Utama Pemanfaatan Portal Digital PGRI Kabupaten Tebo
+                </p>
+            </div>
+
+            <!-- 4 PILLARS GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                
+                <!-- Pilar 1 -->
+                <div class="glass-card p-5 sm:p-6 rounded-2xl flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/20 border border-cyan-400/30 flex items-center justify-center flex-shrink-0 text-cyan-400 text-xl shadow-inner">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-bold text-white mb-1">1. Transparansi & Akses Informasi Terpadu</h4>
+                        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                            Pusat publikasi resmi untuk seluruh berita pendidikan, pengumuman regulasi, surat edaran, serta dokumen organisasi. Anggota dapat mengakses informasi valid tanpa terpengaruh isu tidak pasti (*hoaks*).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pilar 2 -->
+                <div class="glass-card p-5 sm:p-6 rounded-2xl flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/20 border border-blue-400/30 flex items-center justify-center flex-shrink-0 text-blue-400 text-xl shadow-inner">
+                        <i class="fa-solid fa-id-card"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-bold text-white mb-1">2. Digitalisasi Layanan Anggota</h4>
+                        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                            Kemudahan integrasi pendataan guru, pembuatan Kartu Tanda Anggota (KTA) Digital, serta akses perlindungan profesi melalui **Layanan Bantuan Hukum (LKBH PGRI)** secara mudah, cepat, dan terukur.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pilar 3 -->
+                <div class="glass-card p-5 sm:p-6 rounded-2xl flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-rose-500/20 border border-rose-400/30 flex items-center justify-center flex-shrink-0 text-rose-400 text-xl shadow-inner">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-bold text-white mb-1">3. Wadah Pengembangan Profesi</h4>
+                        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                            Fasilitas peningkatan kompetensi guru secara bersinambungan melalui informasi agenda diklat, beasiswa, seminar nasional, workshop digital, dan pengembangan karir guru di wilayah Kabupaten Tebo.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pilar 4 -->
+                <div class="glass-card p-5 sm:p-6 rounded-2xl flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-teal-500/20 border border-teal-400/30 flex items-center justify-center flex-shrink-0 text-teal-400 text-xl shadow-inner">
+                        <i class="fa-solid fa-sitemap"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-bold text-white mb-1">4. Penguatan Jejaring & Solidaritas</h4>
+                        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                            Menghubungkan Pengurus Daerah dengan seluruh Pengurus Cabang (Kecamatan) dan Ranting se-Kabupaten Tebo. Mempererat jiwa karsa (*esprit de corps*) guru dalam satu wadah perjuangan.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- CLOSING MESSAGE CARD -->
+        <div class="w-full glass-panel rounded-2xl p-6 text-center mb-8 border border-emerald-500/20">
+            <i class="fa-solid fa-quote-left text-3xl text-emerald-400/40 mb-2"></i>
+            <p class="text-xs sm:text-sm text-gray-200 italic leading-relaxed max-w-3xl mx-auto">
+                "Mari kita manfaatkan portal digital ini sebaik-baiknya demi mewujudkan guru Kabupaten Tebo yang sejahtera, terlindungi, bermartabat, dan profesional. Bersama PGRI, kita bangun pendidikan Tebo yang unggul dan berkemajuan."
+            </p>
+            <div class="mt-4 pt-4 border-t border-white/10 flex flex-col items-center">
+                <span class="text-xs font-bold text-emerald-300">Dr. Sindi, S.H., M.H.</span>
+                <span class="text-[10px] text-gray-400">Ketua PGRI Kabupaten Tebo</span>
+            </div>
+        </div>
+
+        <!-- BOTTOM RETURN NAVIGATION BUTTON -->
+        <div class="mt-2 text-center">
+            <a href="index.html" class="inline-flex items-center gap-2.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs sm:text-sm font-bold px-6 py-3 rounded-full shadow-lg shadow-emerald-950/60 border border-emerald-400/30 hover:border-emerald-300 transition-all duration-300 group">
+                <i class="fa-solid fa-house transition-transform group-hover:scale-110"></i>
+                <span>Kembali ke Portal Utama (index.html)</span>
+            </a>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="w-full bg-black/60 border-t border-white/10 backdrop-blur-md py-4 px-4 text-center text-gray-400 text-[11px] sm:text-xs relative z-10">
+        <p class="font-medium text-gray-300">&copy; 2026 PGRI Kabupaten Tebo. All Rights Reserved.</p>
+        <p class="text-[10px] sm:text-[11px] text-gray-400 mt-0.5">Muara Tebo, Kabupaten Tebo, Provinsi Jambi</p>
+    </footer>
+
+</body>
+</html>
